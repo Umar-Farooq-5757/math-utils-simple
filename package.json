@@ -18,8 +18,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/math-utils-simple.git"
+    "url": "git+https://github.com/umar-farooq-5757/math-utils-simple.git"
   },
+  "bugs": {
+    "url": "https://github.com/umar-farooq-5757/math-utils-simple/issues"
+  },
+  "homepage": "https://github.com/umar-farooq-5757/math-utils-simple#readme",
   "author": "Umar Farooq",
   "license": "MIT"
 }
