@@ -1,0 +1,25 @@
+{
+  "name": "math-utils-simple",
+  "version": "4.0.0",
+  "description": "Math utility library for npm",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "math",
+    "utils",
+    "npm",
+    "library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/math-utils-simple.git"
+  },
+  "author": "Umar Farooq",
+  "license": "MIT"
+}
