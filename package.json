@@ -3,12 +3,20 @@
   "version": "4.0.1",
   "description": "Math utility library for npm",
   "type": "module",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "node --test"
+    "build": "tsc",
+    "test": "tsx --test tests/**/*.test.ts"
   },
   "keywords": [
     "math",
@@ -23,7 +31,11 @@
   "bugs": {
     "url": "https://github.com/umar-farooq-5757/math-utils-simple/issues"
   },
-  "homepage": "https://github.com/umar-farooq-5757/math-utils-simple#readme",
   "author": "Umar Farooq",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  }
 }
