@@ -1,6 +1,6 @@
 {
   "name": "math-utils-simple",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Math utility library for npm",
   "type": "module",
   "main": "./dist/index.js",

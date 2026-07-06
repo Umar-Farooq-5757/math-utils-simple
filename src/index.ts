@@ -126,3 +126,8 @@ weightedChoice(items, weights)
 randomGaussian(mean, stdDev) (normal distribution via the Box–Muller transform)
 randomSeed(seed) (seeded pseudo-random number generator)
  */
+
+// ALGEBRA
+export { default as solveLinear } from "./algebra/solveLinear.js";
+export { default as discriminant } from "./algebra/discriminant.js";
+export { default as solveQuadratic } from "./algebra/solveQuadratic.js";
