@@ -1,6 +1,6 @@
 {
   "name": "math-utils-simple",
-  "version": "6.1.0",
+  "version": "7.0.0",
   "description": "A modern, lightweight, and fully typed mathematics library for JavaScript and TypeScript.",
   "type": "module",
   "main": "./dist/index.js",
