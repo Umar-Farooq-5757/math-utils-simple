@@ -131,3 +131,14 @@ randomSeed(seed) (seeded pseudo-random number generator)
 export { default as solveLinear } from "./algebra/solveLinear.js";
 export { default as discriminant } from "./algebra/discriminant.js";
 export { default as solveQuadratic } from "./algebra/solveQuadratic.js";
+
+// TRIGONOMETRY
+export { default as degreesToRadians } from "./trigonometry/degreesToRadians.js";
+export { default as radiansToDegrees } from "./trigonometry/radiansToDegrees.js";
+export { default as sin } from "./trigonometry/sin.js";
+export { default as cos } from "./trigonometry/cos.js";
+export { default as tan } from "./trigonometry/tan.js";
+export { default as asin } from "./trigonometry/asin.js";
+export { default as acos } from "./trigonometry/acos.js";
+export { default as atan } from "./trigonometry/atan.js";
+export { default as hypotenuse } from "./trigonometry/hypotenuse.js";
