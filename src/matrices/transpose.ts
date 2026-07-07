@@ -1,7 +1,7 @@
+import validateMatrix from "./utils/validateMatrix.js";
+
 export default function transpose(matrix: number[][]): number[][] {
-  if (matrix.length === 0) {
-    return [];
-  }
+  validateMatrix(matrix);
 
   const rows = matrix.length;
   const cols = matrix[0].length;

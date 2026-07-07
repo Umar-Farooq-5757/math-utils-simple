@@ -17,8 +17,6 @@ import {
   cosineSimilarity,
   angleBetweenVectors,
   projectVector,
-  transpose,
-  matrixMultiply,
 } from "../src/index.js";
 
 test("dotProduct", () => {
@@ -165,38 +163,5 @@ test("projectVector", () => {
   assert.deepEqual(
     projectVector([3, 4], [1, 0]),
     [3, 0]
-  );
-});
-
-test("transpose", () => {
-  assert.deepEqual(
-    transpose([
-      [1, 2, 3],
-      [4, 5, 6],
-    ]),
-    [
-      [1, 4],
-      [2, 5],
-      [3, 6],
-    ]
-  );
-});
-
-test("matrixMultiply", () => {
-  assert.deepEqual(
-    matrixMultiply(
-      [
-        [1, 2],
-        [3, 4],
-      ],
-      [
-        [5, 6],
-        [7, 8],
-      ]
-    ),
-    [
-      [19, 22],
-      [43, 50],
-    ]
   );
 });

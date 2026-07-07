@@ -40,6 +40,11 @@ export { default as previousPrime } from "./number/previousPrime.js";
 export { default as primeFactors } from "./number/primeFactors.js";
 export { default as reverseNumber } from "./number/reverseNumber.js";
 export { default as sumOfDigits } from "./number/sumOfDigits.js";
+export { default as isPowerOfTwo } from "./number/isPowerOfTwo.js";
+export { default as isPowerOfThree } from "./number/isPowerOfThree.js";
+export { default as nextMultiple } from "./number/nextMultiple.js";
+export { default as previousMultiple } from "./number/previousMultiple.js";
+export { default as coprime } from "./number/coprime.js";
 
 // ROUNDING
 export { default as round } from "./rounding/round.js";
@@ -103,8 +108,6 @@ export { default as angleBetweenVectors } from "./arrays/angleBetweenVectors.js"
 export { default as projectVector } from "./arrays/projectVector.js";
 export { default as cumulativeSum } from "./arrays/cumulativeSum.js";
 export { default as movingAverage } from "./arrays/movingAverage.js";
-export { default as transpose } from "./arrays/transpose.js";
-export { default as matrixMultiply } from "./arrays/matrixMultiply.js";
 
 // RANDOM
 export { default as random } from "./random/random.js";
@@ -117,14 +120,14 @@ export { default as sample } from "./random/sample.js";
 /**
  * future goals
  * randomSign() → returns -1 or 1
-randomHexColor()
-randomRGB()
-randomUUID() (using crypto.randomUUID())
-randomString(length, charset)
-randomDate(start, end)
-weightedChoice(items, weights)
-randomGaussian(mean, stdDev) (normal distribution via the Box–Muller transform)
-randomSeed(seed) (seeded pseudo-random number generator)
+ * randomHexColor()
+ * randomRGB()
+ * randomUUID() (using crypto.randomUUID())
+ * randomString(length, charset)
+ * randomDate(start, end)
+ * weightedChoice(items, weights)
+ * randomGaussian(mean, stdDev) (normal distribution via the Box–Muller transform)
+ * randomSeed(seed) (seeded pseudo-random number generator)
  */
 
 // ALGEBRA
@@ -142,3 +145,73 @@ export { default as asin } from "./trigonometry/asin.js";
 export { default as acos } from "./trigonometry/acos.js";
 export { default as atan } from "./trigonometry/atan.js";
 export { default as hypotenuse } from "./trigonometry/hypotenuse.js";
+
+// LOGARITHMS
+export { default as ln } from "./logarithms/ln.js";
+export { default as log10 } from "./logarithms/log10.js";
+export { default as log2 } from "./logarithms/log2.js";
+export { default as log } from "./logarithms/log.js";
+
+// COMBINATORICS
+export { default as permutation } from "./combinatorics/permutation.js";
+export { default as combination } from "./combinatorics/combination.js";
+export { default as binomialCoefficient } from "./combinatorics/binomialCoefficient.js";
+
+// CALCULUS
+export { default as numericalDerivative } from "./calculus/numericalDerivative.js";
+export { default as integrate } from "./calculus/integrate.js";
+/**
+ * Future Goals
+ * secondDerivative(fn, x)
+ * simpsonsRule(fn, start, end) (more accurate integration)
+ * newtonRaphson(fn, derivative, guess) (root finding)
+ * bisectionMethod(fn, left, right)
+ * gradient(fn, point[])
+ * partialDerivative(fn, variableIndex)
+ */
+
+// FINANCE
+export { default as simpleInterest } from "./finance/simpleInterest.js";
+export { default as compoundInterest } from "./finance/compoundInterest.js";
+export { default as loanEMI } from "./finance/loanEMI.js";
+export { default as futureValue } from "./finance/futureValue.js";
+export { default as presentValue } from "./finance/presentValue.js";
+/**
+ * Future Goals
+ * amortizationSchedule()
+ * annuityPayment()
+ * netPresentValue()
+ * internalRateOfReturn()
+ * effectiveAnnualRate()
+ * nominalRate()
+ * paybackPeriod()
+ * depreciationStraightLine()
+ * depreciationDecliningBalance()
+ */
+
+// SEQUENCES
+export { default as arithmeticSequence } from "./sequences/arithmeticSequence.js";
+export { default as geometricSequence } from "./sequences/geometricSequence.js";
+export { default as sumArithmeticSeries } from "./sequences/sumArithmeticSeries.js";
+export { default as sumGeometricSeries } from "./sequences/sumGeometricSeries.js";
+/**
+ * Future Goals
+ * nthArithmeticTerm(a, d, n)
+ * nthGeometricTerm(a, r, n)
+ * harmonicSequence(a, n)
+ * harmonicMean(array)
+ * fibonacci(n)
+ * lucas(n)
+ * tribonacci(n)
+ * pell(n)
+ */
+
+// MATRICES
+export { default as matrixAdd } from "./matrices/matrixAdd.js";
+export { default as matrixSubtract } from "./matrices/matrixSubtract.js";
+export { default as matrixMultiply } from "./matrices/matrixMultiply.js";
+export { default as transpose } from "./matrices/transpose.js";
+export { default as identityMatrix } from "./matrices/identityMatrix.js";
+export { default as determinant } from "./matrices/determinant.js";
+export { default as trace } from "./matrices/trace.js";
+export { default as inverseMatrix } from "./matrices/inverseMatrix.js";

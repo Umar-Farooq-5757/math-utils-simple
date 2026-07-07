@@ -20,6 +20,11 @@ import {
   sumOfDigits,
   reverseNumber,
   digitalRoot,
+  isPowerOfTwo,
+  isPowerOfThree,
+  nextMultiple,
+  previousMultiple,
+  coprime,
 } from "../src/index.js";
 
 test("isEven", () => {
@@ -112,4 +117,32 @@ test("reverseNumber", () => {
 
 test("digitalRoot", () => {
   assert.equal(digitalRoot(9875), 2);
+});
+
+test("isPowerOfTwo", () => {
+  assert.equal(isPowerOfTwo(1), true);
+  assert.equal(isPowerOfTwo(16), true);
+  assert.equal(isPowerOfTwo(18), false);
+  assert.equal(isPowerOfTwo(0), false);
+});
+
+test("isPowerOfThree", () => {
+  assert.equal(isPowerOfThree(1), true);
+  assert.equal(isPowerOfThree(27), true);
+  assert.equal(isPowerOfThree(28), false);
+});
+
+test("nextMultiple", () => {
+  assert.equal(nextMultiple(17, 5), 20);
+  assert.equal(nextMultiple(20, 5), 20);
+});
+
+test("previousMultiple", () => {
+  assert.equal(previousMultiple(17, 5), 15);
+  assert.equal(previousMultiple(20, 5), 20);
+});
+
+test("coprime", () => {
+  assert.equal(coprime(8, 15), true);
+  assert.equal(coprime(12, 18), false);
 });
