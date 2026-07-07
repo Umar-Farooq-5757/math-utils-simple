@@ -215,3 +215,23 @@ export { default as identityMatrix } from "./matrices/identityMatrix.js";
 export { default as determinant } from "./matrices/determinant.js";
 export { default as trace } from "./matrices/trace.js";
 export { default as inverseMatrix } from "./matrices/inverseMatrix.js";
+
+// COMPLEX
+export { default as complexAdd } from "./complex/complexAdd.js";
+export { default as complexSubtract } from "./complex/complexSubtract.js";
+export { default as complexMultiply } from "./complex/complexMultiply.js";
+export { default as complexDivide } from "./complex/complexDivide.js";
+export { default as complexMagnitude } from "./complex/complexMagnitude.js";
+/**
+ * Future Goals
+ * Function	Description
+ * complexConjugate(z)	Returns a−bi
+ * complexArgument(z)	Phase angle (atan2)
+ * complexFromPolar(r, θ)	Polar → rectangular conversion
+ * complexToPolar(z)	Rectangular → polar conversion
+ * complexEquals(a, b, epsilon)	Floating-point tolerant comparison
+ * complexPower(z, n)	Raise to an integer power
+ * complexSqrt(z)	Principal square root
+ * complexExp(z)	Complex exponential
+ * complexLog(z)	Natural logarithm of a complex number
+ */
