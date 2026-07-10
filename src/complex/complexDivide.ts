@@ -1,7 +1,4 @@
-type ComplexNumber = {
-  real: number;
-  imaginary: number;
-};
+import { ComplexNumber } from "./types/complexNumber.js";
 
 export default function complexDivide(
   a: ComplexNumber,

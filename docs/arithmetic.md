@@ -34,11 +34,19 @@ import {
 - multiply
 - divide
 - power
+- square
 - sqrt
-- factorial
-- gcd
 - lcm
 - average
+- abs
+- cube
+- cubeRoot
+- increment
+- decrement
+- reciprocal
+- nthRoot
+- negate
+- mod
 
 ---
 

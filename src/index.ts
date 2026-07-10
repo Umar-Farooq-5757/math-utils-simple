@@ -22,7 +22,6 @@ export { default as digitCount } from "./number/digitCount.js";
 export { default as divisors } from "./number/divisors.js";
 export { default as factorial } from "./number/factorial.js";
 export { default as factors } from "./number/factors.js";
-export { default as fibonacci } from "./number/fibonacci.js";
 export { default as gcd } from "./number/gcd.js";
 export { default as isArmstrongNumber } from "./number/isArmstrongNumber.js";
 export { default as isEven } from "./number/isEven.js";
@@ -35,7 +34,6 @@ export { default as isPerfectSquare } from "./number/isPerfectSquare.js";
 export { default as isPrime } from "./number/isPrime.js";
 export { default as lcm } from "./number/lcm.js";
 export { default as nextPrime } from "./number/nextPrime.js";
-export { default as nthFibonacci } from "./number/nthFibonacci.js";
 export { default as previousPrime } from "./number/previousPrime.js";
 export { default as primeFactors } from "./number/primeFactors.js";
 export { default as reverseNumber } from "./number/reverseNumber.js";
@@ -117,18 +115,15 @@ export { default as randomBoolean } from "./random/randomBoolean.js";
 export { default as randomChoice } from "./random/randomChoice.js";
 export { default as shuffle } from "./random/shuffle.js";
 export { default as sample } from "./random/sample.js";
-/**
- * future goals
- * randomSign() → returns -1 or 1
- * randomHexColor()
- * randomRGB()
- * randomUUID() (using crypto.randomUUID())
- * randomString(length, charset)
- * randomDate(start, end)
- * weightedChoice(items, weights)
- * randomGaussian(mean, stdDev) (normal distribution via the Box–Muller transform)
- * randomSeed(seed) (seeded pseudo-random number generator)
- */
+export { default as randomSign } from "./random/randomSign.js";
+export { default as randomHexColor } from "./random/randomHexColor.js";
+export { default as randomRGB } from "./random/randomRGB.js";
+export { default as randomUUID } from "./random/randomUUID.js";
+export { default as randomString } from "./random/randomString.js";
+export { default as randomDate } from "./random/randomDate.js";
+export { default as weightedChoice } from "./random/weightedChoice.js";
+export { default as randomGaussian } from "./random/randomGaussian.js";
+export { default as randomSeed } from "./random/randomSeed.js";
 
 // ALGEBRA
 export { default as solveLinear } from "./algebra/solveLinear.js";
@@ -160,15 +155,12 @@ export { default as binomialCoefficient } from "./combinatorics/binomialCoeffici
 // CALCULUS
 export { default as numericalDerivative } from "./calculus/numericalDerivative.js";
 export { default as integrate } from "./calculus/integrate.js";
-/**
- * Future Goals
- * secondDerivative(fn, x)
- * simpsonsRule(fn, start, end) (more accurate integration)
- * newtonRaphson(fn, derivative, guess) (root finding)
- * bisectionMethod(fn, left, right)
- * gradient(fn, point[])
- * partialDerivative(fn, variableIndex)
- */
+export { default as secondDerivative } from "./calculus/secondDerivative.js";
+export { default as simpsonsRule } from "./calculus/simpsonsRule.js";
+export { default as newtonRaphson } from "./calculus/newtonRaphson.js";
+export { default as bisectionMethod } from "./calculus/bisectionMethod.js";
+export { default as gradient } from "./calculus/gradient.js";
+export { default as partialDerivative } from "./calculus/partialDerivative.js";
 
 // FINANCE
 export { default as simpleInterest } from "./finance/simpleInterest.js";
@@ -176,35 +168,30 @@ export { default as compoundInterest } from "./finance/compoundInterest.js";
 export { default as loanEMI } from "./finance/loanEMI.js";
 export { default as futureValue } from "./finance/futureValue.js";
 export { default as presentValue } from "./finance/presentValue.js";
-/**
- * Future Goals
- * amortizationSchedule()
- * annuityPayment()
- * netPresentValue()
- * internalRateOfReturn()
- * effectiveAnnualRate()
- * nominalRate()
- * paybackPeriod()
- * depreciationStraightLine()
- * depreciationDecliningBalance()
- */
+export { default as amortizationSchedule } from "./finance/amortizationSchedule.js";
+export { default as annuityPayment } from "./finance/annuityPayment.js";
+export { default as netPresentValue } from "./finance/netPresentValue.js";
+export { default as internalRateOfReturn } from "./finance/internalRateOfReturn.js";
+export { default as effectiveAnnualRate } from "./finance/effectiveAnnualRate.js";
+export { default as nominalRate } from "./finance/nominalRate.js";
+export { default as paybackPeriod } from "./finance/paybackPeriod.js";
+export { default as depreciationStraightLine } from "./finance/depreciationStraightLine.js";
+export { default as depreciationDecliningBalance } from "./finance/depreciationDecliningBalance.js";
 
 // SEQUENCES
 export { default as arithmeticSequence } from "./sequences/arithmeticSequence.js";
 export { default as geometricSequence } from "./sequences/geometricSequence.js";
 export { default as sumArithmeticSeries } from "./sequences/sumArithmeticSeries.js";
 export { default as sumGeometricSeries } from "./sequences/sumGeometricSeries.js";
-/**
- * Future Goals
- * nthArithmeticTerm(a, d, n)
- * nthGeometricTerm(a, r, n)
- * harmonicSequence(a, n)
- * harmonicMean(array)
- * fibonacci(n)
- * lucas(n)
- * tribonacci(n)
- * pell(n)
- */
+export { default as fibonacci } from "./sequences/fibonacci.js";
+export { default as nthFibonacci } from "./sequences/nthFibonacci.js";
+export { default as nthArithmeticTerm } from "./sequences/nthArithmeticTerm.js";
+export { default as nthGeometricTerm } from "./sequences/nthGeometricTerm.js";
+export { default as harmonicSequence } from "./sequences/harmonicSequence.js";
+export { default as harmonicMean } from "./sequences/harmonicMean.js";
+export { default as lucas } from "./sequences/lucas.js";
+export { default as tribonacci } from "./sequences/tribonacci.js";
+export { default as pell } from "./sequences/pell.js";
 
 // MATRICES
 export { default as matrixAdd } from "./matrices/matrixAdd.js";
@@ -222,16 +209,12 @@ export { default as complexSubtract } from "./complex/complexSubtract.js";
 export { default as complexMultiply } from "./complex/complexMultiply.js";
 export { default as complexDivide } from "./complex/complexDivide.js";
 export { default as complexMagnitude } from "./complex/complexMagnitude.js";
-/**
- * Future Goals
- * Function	Description
- * complexConjugate(z)	Returns a−bi
- * complexArgument(z)	Phase angle (atan2)
- * complexFromPolar(r, θ)	Polar → rectangular conversion
- * complexToPolar(z)	Rectangular → polar conversion
- * complexEquals(a, b, epsilon)	Floating-point tolerant comparison
- * complexPower(z, n)	Raise to an integer power
- * complexSqrt(z)	Principal square root
- * complexExp(z)	Complex exponential
- * complexLog(z)	Natural logarithm of a complex number
- */
+export { default as complexConjugate } from "./complex/complexConjugate.js";
+export { default as complexArgument } from "./complex/complexArgument.js";
+export { default as complexFromPolar } from "./complex/complexFromPolar.js";
+export { default as complexToPolar } from "./complex/complexToPolar.js";
+export { default as complexEquals } from "./complex/complexEquals.js";
+export { default as complexPower } from "./complex/complexPower.js";
+export { default as complexSqrt } from "./complex/complexSqrt.js";
+export { default as complexExp } from "./complex/complexExp.js";
+export { default as complexLog } from "./complex/complexLog.js";

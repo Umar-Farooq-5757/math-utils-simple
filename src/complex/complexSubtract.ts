@@ -1,7 +1,5 @@
-type ComplexNumber = {
-  real: number;
-  imaginary: number;
-};
+import { ComplexNumber } from "./types/complexNumber.js";
+
 export default function complexSubtract(
   a: ComplexNumber,
   b: ComplexNumber,
