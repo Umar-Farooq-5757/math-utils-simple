@@ -43,6 +43,22 @@ export { default as isPowerOfThree } from "./number/isPowerOfThree.js";
 export { default as nextMultiple } from "./number/nextMultiple.js";
 export { default as previousMultiple } from "./number/previousMultiple.js";
 export { default as coprime } from "./number/coprime.js";
+/**
+ * Future Goals
+ * isComposite(n)
+ * isHarshadNumber(n)
+ * isHappyNumber(n)
+ * isAbundantNumber(n)
+ * isDeficientNumber(n)
+ * isKaprekarNumber(n)
+ * isSmithNumber(n)
+ * isAutomorphicNumber(n)
+ * isFibonacciNumber(n)
+ * isTriangularNumber(n)
+ * primeCount(limit)
+ * nthPrime(n)
+ * twinPrimes(limit)
+ */
 
 // ROUNDING
 export { default as round } from "./rounding/round.js";
@@ -88,6 +104,25 @@ export { default as count } from "./statistics/count.js";
 export { default as frequency } from "./statistics/frequency.js";
 export { default as quartiles } from "./statistics/quartiles.js";
 export { default as interQuartileRange } from "./statistics/interQuartileRange.js";
+/**
+ * Future Goals
+ * meanAbsoluteDeviation()
+ * coefficientOfVariation()
+ * covariance()
+ * correlationCoefficient()
+ * zScore()
+ * standardScore()
+ * percentile()
+ * percentileRank()
+ * weightedAverage()
+ * skewness()
+ * kurtosis()
+ * linearRegression()
+ * rSquared()
+ * rootMeanSquare()
+ * geometricMean()
+ * trimmedMean()
+ */
 
 // ARRAYS
 export { default as dotProduct } from "./arrays/dotProduct.js";
@@ -106,6 +141,21 @@ export { default as angleBetweenVectors } from "./arrays/angleBetweenVectors.js"
 export { default as projectVector } from "./arrays/projectVector.js";
 export { default as cumulativeSum } from "./arrays/cumulativeSum.js";
 export { default as movingAverage } from "./arrays/movingAverage.js";
+/**
+ * Future Goals
+ * vectorAdd()
+ * vectorSubtract()
+ * vectorProjection()
+ * vectorReflection()
+ * vectorRotate2D()
+ * vectorRotate3D()
+ * vectorLerp()
+ * vectorAngleSigned()
+ * distanceManhattan()
+ * distanceChebyshev()
+ * distanceMinkowski()
+ * distanceHamming()
+ */
 
 // RANDOM
 export { default as random } from "./random/random.js";
@@ -124,11 +174,39 @@ export { default as randomDate } from "./random/randomDate.js";
 export { default as weightedChoice } from "./random/weightedChoice.js";
 export { default as randomGaussian } from "./random/randomGaussian.js";
 export { default as randomSeed } from "./random/randomSeed.js";
+/**
+ * Future Goals
+ * randomNormal()
+ * randomExponential()
+ * randomPoisson()
+ * randomBinomial()
+ * randomTriangular()
+ * randomWeightedShuffle()
+ * uuidV4()
+ * randomPassword()
+ * randomPrime()
+ * randomPermutation()
+ */
 
 // ALGEBRA
 export { default as solveLinear } from "./algebra/solveLinear.js";
 export { default as discriminant } from "./algebra/discriminant.js";
 export { default as solveQuadratic } from "./algebra/solveQuadratic.js";
+/**
+ * Future Goals
+ * solveCubic()
+ * solveQuartic()
+ * evaluatePolynomial()
+ * polynomialDerivative()
+ * polynomialIntegral()
+ * horner()
+ * syntheticDivision()
+ * lagrangeInterpolation()
+ * newtonInterpolation()
+ * quadraticVertex()
+ * lineIntersection()
+ * distancePointToLine()
+ */
 
 // TRIGONOMETRY
 export { default as degreesToRadians } from "./trigonometry/degreesToRadians.js";
@@ -140,6 +218,25 @@ export { default as asin } from "./trigonometry/asin.js";
 export { default as acos } from "./trigonometry/acos.js";
 export { default as atan } from "./trigonometry/atan.js";
 export { default as hypotenuse } from "./trigonometry/hypotenuse.js";
+/**
+ * Future Goals
+ * cot()
+ * sec()
+ * csc()
+ * acot()
+ * asec()
+ * acsc()
+ * sinh()
+ * cosh()
+ * tanh()
+ * asinh()
+ * acosh()
+ * atanh()
+ * lawOfCosines()
+ * lawOfSines()
+ * bearing()
+ * greatCircleDistance()
+ */
 
 // LOGARITHMS
 export { default as ln } from "./logarithms/ln.js";
@@ -161,6 +258,20 @@ export { default as newtonRaphson } from "./calculus/newtonRaphson.js";
 export { default as bisectionMethod } from "./calculus/bisectionMethod.js";
 export { default as gradient } from "./calculus/gradient.js";
 export { default as partialDerivative } from "./calculus/partialDerivative.js";
+/**
+ * Future Goals
+ * thirdDerivative()
+ * jacobian()
+ * hessian()
+ * laplacian()
+ * secantMethod()
+ * falsePositionMethod()
+ * trapezoidalRule()
+ * rombergIntegration()
+ * adaptiveSimpson()
+ * eulerMethod()
+ * rungeKutta4()
+ */
 
 // FINANCE
 export { default as simpleInterest } from "./finance/simpleInterest.js";
@@ -177,6 +288,24 @@ export { default as nominalRate } from "./finance/nominalRate.js";
 export { default as paybackPeriod } from "./finance/paybackPeriod.js";
 export { default as depreciationStraightLine } from "./finance/depreciationStraightLine.js";
 export { default as depreciationDecliningBalance } from "./finance/depreciationDecliningBalance.js";
+/**
+ * Future Goals
+ * futureValueAnnuity()
+ * presentValueAnnuity()
+ * loanBalance()
+ * balloonPayment()
+ * mortgagePayment()
+ * bondPrice()
+ * bondYield()
+ * currencyExchange()
+ * breakEvenPoint()
+ * roi()
+ * cagr()
+ * profit()
+ * loss()
+ * inflationAdjustedValue()
+ * taxAmount()
+ */
 
 // SEQUENCES
 export { default as arithmeticSequence } from "./sequences/arithmeticSequence.js";
@@ -192,6 +321,20 @@ export { default as harmonicMean } from "./sequences/harmonicMean.js";
 export { default as lucas } from "./sequences/lucas.js";
 export { default as tribonacci } from "./sequences/tribonacci.js";
 export { default as pell } from "./sequences/pell.js";
+/**
+ * Future Goals
+ * catalan()
+ * bell()
+ * bernoulli()
+ * stirlingFirstKind()
+ * stirlingSecondKind()
+ * pascalRow()
+ * lookAndSay()
+ * collatz()
+ * hailstone()
+ * fareySequence()
+ * continuedFraction()
+ */
 
 // MATRICES
 export { default as matrixAdd } from "./matrices/matrixAdd.js";
@@ -202,6 +345,28 @@ export { default as identityMatrix } from "./matrices/identityMatrix.js";
 export { default as determinant } from "./matrices/determinant.js";
 export { default as trace } from "./matrices/trace.js";
 export { default as inverseMatrix } from "./matrices/inverseMatrix.js";
+/**
+ * Future Goals
+ * matrixScale()
+ * matrixPower()
+ * matrixRank()
+ * matrixMinor()
+ * matrixCofactor()
+ * adjugateMatrix()
+ * matrixNorm()
+ * frobeniusNorm()
+ * matrixEquals()
+ * isSquareMatrix()
+ * isSymmetric()
+ * isIdentity()
+ * isDiagonal()
+ * isOrthogonal()
+ * matrixLU()
+ * matrixQR()
+ * matrixEigenvalues()
+ * matrixEigenvectors()
+ * matrixSolve()
+ */
 
 // COMPLEX
 export { default as complexAdd } from "./complex/complexAdd.js";
@@ -218,3 +383,185 @@ export { default as complexPower } from "./complex/complexPower.js";
 export { default as complexSqrt } from "./complex/complexSqrt.js";
 export { default as complexExp } from "./complex/complexExp.js";
 export { default as complexLog } from "./complex/complexLog.js";
+/**
+ * Future Goals
+ * complexSin()
+ * complexCos()
+ * complexTan()
+ * complexAsin()
+ * complexAcos()
+ * complexAtan()
+ * complexSinh()
+ * complexCosh()
+ * complexTanh()
+ * complexInverse()
+ * complexNormalize()
+ * complexRotate()
+ * complexRoot()
+ * complexNthRoots()
+ */
+
+// CONSTANTS
+export { PI } from "./constants/constants.js";
+export { E } from "./constants/constants.js";
+export { SQRT2 } from "./constants/constants.js";
+export { SQRT3 } from "./constants/constants.js";
+export { LN2 } from "./constants/constants.js";
+export { TAU } from "./constants/constants.js";
+export { PHI } from "./constants/constants.js";
+export { CATALAN } from "./constants/constants.js";
+export { APERY } from "./constants/constants.js";
+
+// GEOMETRY
+/**
+ * Future Goals
+ * circleArea()
+ * circleCircumference()
+ * sphereVolume()
+ * sphereSurfaceArea()
+ * cylinderVolume()
+ * cylinderSurfaceArea()
+ * coneVolume()
+ * coneSurfaceArea()
+ * cubeVolume()
+ * cuboidVolume()
+ * triangleArea()
+ * trianglePerimeter()
+ * triangleType()
+ * rectangleArea()
+ * rectanglePerimeter()
+ * polygonArea()
+ * ellipseArea()
+ * distance2D()
+ * distance3D()
+ * midpoint()
+ * centroid()
+ * heronsFormula()
+ */
+
+// LINEAR ALGEBRA
+/**
+ * Future Goals
+ * gramSchmidt()
+ * orthogonalize()
+ * eigen()
+ * svd()
+ * leastSquares()
+ * projection()
+ * cross()
+ * outerProduct()
+ * kroneckerProduct()
+ * tensorProduct()
+ */
+
+// COORDINATE GEOMETRY
+/**
+ * Future Goals
+ * slope()
+ * distance()
+ * midpoint()
+ * lineEquation()
+ * circleEquation()
+ * reflectPoint()
+ * rotatePoint()
+ * translatePoint()
+ * scalePoint()
+ */
+
+// PROBABILITY
+/**
+ * Future Goals
+ * factorialProbability()
+ * binomialProbability()
+ * poissonProbability()
+ * normalPDF()
+ * normalCDF()
+ * uniformPDF()
+ * uniformCDF()
+ * exponentialPDF()
+ * exponentialCDF()
+ * bayes()
+ * odds()
+ * combinationsProbability()
+ */
+
+// NUMERICAL METHODS
+/**
+ * Future Goals
+ * gaussElimination()
+ * gaussJordan()
+ * jacobiIteration()
+ * gaussSeidel()
+ * sor()
+ * lagrangeInterpolation()
+ * newtonInterpolation()
+ * barycentricInterpolation()
+ */
+
+// CRYPTOGRAPHY HELPERS
+/**
+ * Future Goals
+ * modInverse()
+ * extendedGCD()
+ * modPow()
+ * rsaToy()
+ * caesarCipher()
+ * vigenereCipher()
+ * xorCipher()
+ */
+
+// BINARY
+/**
+ * Future Goals
+ * decimalToBinary()
+ * binaryToDecimal()
+ * hexToDecimal()
+ * decimalToHex()
+ * grayCode()
+ * parityBit()
+ * twosComplement()
+ */
+
+// NUMBER THEORY
+/**
+ * Future Goals
+ * extendedEuclid()
+ * eulerTotient()
+ * mobius()
+ * legendreSymbol()
+ * jacobiSymbol()
+ * chineseRemainder()
+ * modInverse()
+ * modFactorial()
+ * modCombination()
+ */
+
+// UNIT CONVERSION
+/**
+ * Future Goals
+ * metersToFeet()
+ * feetToMeters()
+ * celsiusToKelvin()
+ * fahrenheitToCelsius()
+ * kmhToMph()
+ * mphToKmh()
+ * bytesToKB()
+ * kbToMB()
+ * litersToGallons()
+ * gramsToOunces()
+ * degreesToRadians()
+ * radiansToDegrees()
+ */
+
+// DATE MATH
+/**
+ * Future Goals
+ * daysBetween()
+ * weeksBetween()
+ * monthsBetween()
+ * isWeekend()
+ * isBusinessDay()
+ * addBusinessDays()
+ * age()
+ * dayOfYear()
+ */

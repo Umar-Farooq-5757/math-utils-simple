@@ -1,0 +1,10 @@
+export const PI: number = Math.PI;
+export const E: number = Math.E;
+export const SQRT2: number = Math.SQRT2;
+export const LN2: number = Math.LN2;
+export const LN10: number = Math.LN10;
+export const TAU: number = Math.PI * 2;
+export const PHI: number = (1 + Math.sqrt(5)) / 2;
+export const SQRT3: number = Math.sqrt(3);
+export const CATALAN: number = 0.915965594177219015054603514;
+export const APERY: number = 1.202056903159594285399738161;

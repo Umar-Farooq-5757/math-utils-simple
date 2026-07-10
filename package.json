@@ -1,6 +1,6 @@
 {
   "name": "math-utils-simple",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "description": "A modern, lightweight, and fully typed mathematics library for JavaScript and TypeScript.",
   "type": "module",
   "main": "./dist/index.js",
@@ -47,7 +47,7 @@
   "author": "Umar Farooq",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^26.1.0",
+    "@types/node": "^26.1.1",
     "tsx": "^4.23.0",
     "typescript": "^6.0.3"
   }
