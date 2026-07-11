@@ -14,6 +14,17 @@ import {
   lucas,
   tribonacci,
   pell,
+  catalan,
+  bell,
+  bernoulli,
+  stirlingFirstKind,
+  stirlingSecondKind,
+  pascalRow,
+  lookAndSay,
+  collatz,
+  hailstone,
+  fareySequence,
+  continuedFraction,
 } from "../src/index.js";
 
 test("arithmeticSequence", () => {
@@ -133,4 +144,111 @@ test("pell base cases", () => {
 
 test("pell invalid n", () => {
   assert.throws(() => pell(-2));
+});
+
+test("catalan", () => {
+  assert.equal(catalan(0), 1);
+  assert.equal(catalan(5), 42);
+});
+
+test("catalan invalid", () => {
+  assert.throws(() => catalan(-1));
+});
+
+test("bell", () => {
+  assert.equal(bell(0), 1);
+  assert.equal(bell(5), 52);
+});
+
+test("bell invalid", () => {
+  assert.throws(() => bell(-2));
+});
+
+test("bernoulli", () => {
+  assert.equal(bernoulli(0), 1);
+  assert.ok(Math.abs(bernoulli(1) + 0.5) < 1e-10);
+});
+
+test("bernoulli invalid", () => {
+  assert.throws(() => bernoulli(-1));
+});
+
+test("stirlingFirstKind", () => {
+  assert.equal(stirlingFirstKind(5, 2), -50);
+  assert.equal(stirlingFirstKind(4, 4), 1);
+});
+
+test("stirlingFirstKind invalid", () => {
+  assert.throws(() => stirlingFirstKind(-1, 2));
+});
+
+test("stirlingSecondKind", () => {
+  assert.equal(stirlingSecondKind(5, 2), 15);
+  assert.equal(stirlingSecondKind(4, 4), 1);
+});
+
+test("stirlingSecondKind invalid", () => {
+  assert.throws(() => stirlingSecondKind(-1, 2));
+});
+
+test("pascalRow", () => {
+  assert.deepEqual(pascalRow(0), [1]);
+  assert.deepEqual(pascalRow(4), [1, 4, 6, 4, 1]);
+});
+
+test("pascalRow invalid", () => {
+  assert.throws(() => pascalRow(-3));
+});
+
+test("lookAndSay", () => {
+  assert.equal(lookAndSay(1), "1");
+  assert.equal(lookAndSay(5), "111221");
+});
+
+test("lookAndSay invalid", () => {
+  assert.throws(() => lookAndSay(0));
+});
+
+test("collatz", () => {
+  assert.deepEqual(collatz(6), [6, 3, 10, 5, 16, 8, 4, 2, 1]);
+});
+
+test("collatz invalid", () => {
+  assert.throws(() => collatz(0));
+});
+
+test("hailstone", () => {
+  assert.deepEqual(hailstone(6), [6, 3, 10, 5, 16, 8, 4, 2, 1]);
+});
+
+test("hailstone invalid", () => {
+  assert.throws(() => hailstone(-2));
+});
+
+test("fareySequence", () => {
+  const result = fareySequence(3);
+
+  assert.deepEqual(result, [
+    { numerator: 0, denominator: 1 },
+    { numerator: 1, denominator: 3 },
+    { numerator: 1, denominator: 2 },
+    { numerator: 2, denominator: 3 },
+    { numerator: 1, denominator: 1 },
+  ]);
+});
+
+test("fareySequence invalid", () => {
+  assert.throws(() => fareySequence(0));
+});
+
+test("continuedFraction integer", () => {
+  assert.deepEqual(continuedFraction(5), [5]);
+});
+
+test("continuedFraction rational", () => {
+  assert.deepEqual(continuedFraction(3.25), [3, 4]);
+});
+
+test("continuedFraction invalid", () => {
+  assert.throws(() => continuedFraction(Number.POSITIVE_INFINITY));
 });

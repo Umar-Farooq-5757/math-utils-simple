@@ -25,6 +25,19 @@ import {
   nextMultiple,
   previousMultiple,
   coprime,
+  isComposite,
+  isHarshadNumber,
+  isHappyNumber,
+  isAbundantNumber,
+  isDeficientNumber,
+  isKaprekarNumber,
+  isSmithNumber,
+  isAutomorphicNumber,
+  isFibonacciNumber,
+  isTriangularNumber,
+  primeCount,
+  nthPrime,
+  twinPrimes,
 } from "../src/index.js";
 
 test("isEven", () => {
@@ -145,4 +158,68 @@ test("previousMultiple", () => {
 test("coprime", () => {
   assert.equal(coprime(8, 15), true);
   assert.equal(coprime(12, 18), false);
+});
+
+test("isComposite", () => {
+  assert.equal(isComposite(9), true);
+  assert.equal(isComposite(7), false);
+});
+
+test("isHarshadNumber", () => {
+  assert.equal(isHarshadNumber(18), true);
+});
+
+test("isHappyNumber", () => {
+  assert.equal(isHappyNumber(19), true);
+  assert.equal(isHappyNumber(20), false);
+});
+
+test("isAbundantNumber", () => {
+  assert.equal(isAbundantNumber(12), true);
+});
+
+test("isDeficientNumber", () => {
+  assert.equal(isDeficientNumber(13), true);
+});
+
+test("isKaprekarNumber", () => {
+  assert.equal(isKaprekarNumber(45), true);
+});
+
+test("isSmithNumber", () => {
+  assert.equal(isSmithNumber(666), true);
+});
+
+test("isAutomorphicNumber", () => {
+  assert.equal(isAutomorphicNumber(25), true);
+});
+
+test("isFibonacciNumber", () => {
+  assert.equal(isFibonacciNumber(34), true);
+  assert.equal(isFibonacciNumber(35), false);
+});
+
+test("isTriangularNumber", () => {
+  assert.equal(isTriangularNumber(15), true);
+});
+
+test("primeCount", () => {
+  assert.equal(primeCount(10), 4);
+});
+
+test("nthPrime", () => {
+  assert.equal(nthPrime(10), 29);
+});
+
+test("nthPrime invalid", () => {
+  assert.throws(() => nthPrime(0));
+});
+
+test("twinPrimes", () => {
+  assert.deepEqual(twinPrimes(20), [
+    [3, 5],
+    [5, 7],
+    [11, 13],
+    [17, 19],
+  ]);
 });

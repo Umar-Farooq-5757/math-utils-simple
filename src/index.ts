@@ -43,22 +43,19 @@ export { default as isPowerOfThree } from "./number/isPowerOfThree.js";
 export { default as nextMultiple } from "./number/nextMultiple.js";
 export { default as previousMultiple } from "./number/previousMultiple.js";
 export { default as coprime } from "./number/coprime.js";
-/**
- * Future Goals
- * isComposite(n)
- * isHarshadNumber(n)
- * isHappyNumber(n)
- * isAbundantNumber(n)
- * isDeficientNumber(n)
- * isKaprekarNumber(n)
- * isSmithNumber(n)
- * isAutomorphicNumber(n)
- * isFibonacciNumber(n)
- * isTriangularNumber(n)
- * primeCount(limit)
- * nthPrime(n)
- * twinPrimes(limit)
- */
+export { default as isComposite } from "./number/isComposite.js";
+export { default as isHarshadNumber } from "./number/isHarshadNumber.js";
+export { default as isHappyNumber } from "./number/isHappyNumber.js";
+export { default as isAbundantNumber } from "./number/isAbundantNumber.js";
+export { default as isDeficientNumber } from "./number/isDeficientNumber.js";
+export { default as isKaprekarNumber } from "./number/isKaprekarNumber.js";
+export { default as isSmithNumber } from "./number/isSmithNumber.js";
+export { default as isAutomorphicNumber } from "./number/isAutomorphicNumber.js";
+export { default as isFibonacciNumber } from "./number/isFibonacciNumber.js";
+export { default as isTriangularNumber } from "./number/isTriangularNumber.js";
+export { default as primeCount } from "./number/primeCount.js";
+export { default as nthPrime } from "./number/nthPrime.js";
+export { default as twinPrimes } from "./number/twinPrimes.js";
 
 // ROUNDING
 export { default as round } from "./rounding/round.js";
@@ -174,39 +171,31 @@ export { default as randomDate } from "./random/randomDate.js";
 export { default as weightedChoice } from "./random/weightedChoice.js";
 export { default as randomGaussian } from "./random/randomGaussian.js";
 export { default as randomSeed } from "./random/randomSeed.js";
-/**
- * Future Goals
- * randomNormal()
- * randomExponential()
- * randomPoisson()
- * randomBinomial()
- * randomTriangular()
- * randomWeightedShuffle()
- * uuidV4()
- * randomPassword()
- * randomPrime()
- * randomPermutation()
- */
+export { default as randomNormal } from "./random/randomNormal.js";
+export { default as randomExponential } from "./random/randomExponential.js";
+export { default as randomPoisson } from "./random/randomPoisson.js";
+export { default as randomBinomial } from "./random/randomBinomial.js";
+export { default as randomTriangular } from "./random/randomTriangular.js";
+export { default as randomWeightedShuffle } from "./random/randomWeightedShuffle.js";
+export { default as uuidV4 } from "./random/uuidV4.js";
+export { default as randomPassword } from "./random/randomPassword.js";
+export { default as randomPrime } from "./random/randomPrime.js";
+export { default as randomPermutation } from "./random/randomPermutation.js";
 
 // ALGEBRA
 export { default as solveLinear } from "./algebra/solveLinear.js";
 export { default as discriminant } from "./algebra/discriminant.js";
 export { default as solveQuadratic } from "./algebra/solveQuadratic.js";
-/**
- * Future Goals
- * solveCubic()
- * solveQuartic()
- * evaluatePolynomial()
- * polynomialDerivative()
- * polynomialIntegral()
- * horner()
- * syntheticDivision()
- * lagrangeInterpolation()
- * newtonInterpolation()
- * quadraticVertex()
- * lineIntersection()
- * distancePointToLine()
- */
+export { default as evaluatePolynomial } from "./algebra/evaluatePolynomial.js";
+export { default as polynomialDerivative } from "./algebra/polynomialDerivative.js";
+export { default as polynomialIntegral } from "./algebra/polynomialIntegral.js";
+export { default as horner } from "./algebra/horner.js";
+export { default as syntheticDivision } from "./algebra/syntheticDivision.js";
+export { default as lagrangeInterpolation } from "./algebra/lagrangeInterpolation.js";
+export { default as newtonInterpolation } from "./algebra/newtonInterpolation.js";
+export { default as quadraticVertex } from "./algebra/quadraticVertex.js";
+export { default as lineIntersection } from "./algebra/lineIntersection.js";
+export { default as distancePointToLine } from "./algebra/distancePointToLine.js";
 
 // TRIGONOMETRY
 export { default as degreesToRadians } from "./trigonometry/degreesToRadians.js";
@@ -218,25 +207,22 @@ export { default as asin } from "./trigonometry/asin.js";
 export { default as acos } from "./trigonometry/acos.js";
 export { default as atan } from "./trigonometry/atan.js";
 export { default as hypotenuse } from "./trigonometry/hypotenuse.js";
-/**
- * Future Goals
- * cot()
- * sec()
- * csc()
- * acot()
- * asec()
- * acsc()
- * sinh()
- * cosh()
- * tanh()
- * asinh()
- * acosh()
- * atanh()
- * lawOfCosines()
- * lawOfSines()
- * bearing()
- * greatCircleDistance()
- */
+export { default as cot } from "./trigonometry/cot.js";
+export { default as sec } from "./trigonometry/sec.js";
+export { default as csc } from "./trigonometry/csc.js";
+export { default as acot } from "./trigonometry/acot.js";
+export { default as asec } from "./trigonometry/asec.js";
+export { default as acsc } from "./trigonometry/acsc.js";
+export { default as sinh } from "./trigonometry/sinh.js";
+export { default as cosh } from "./trigonometry/cosh.js";
+export { default as tanh } from "./trigonometry/tanh.js";
+export { default as asinh } from "./trigonometry/asinh.js";
+export { default as acosh } from "./trigonometry/acosh.js";
+export { default as atanh } from "./trigonometry/atanh.js";
+export { default as lawOfCosines } from "./trigonometry/lawOfCosines.js";
+export { default as lawOfSines } from "./trigonometry/lawOfSines.js";
+export { default as bearing } from "./trigonometry/bearing.js";
+export { default as greatCircleDistance } from "./trigonometry/greatCircleDistance.js";
 
 // LOGARITHMS
 export { default as ln } from "./logarithms/ln.js";
@@ -321,20 +307,17 @@ export { default as harmonicMean } from "./sequences/harmonicMean.js";
 export { default as lucas } from "./sequences/lucas.js";
 export { default as tribonacci } from "./sequences/tribonacci.js";
 export { default as pell } from "./sequences/pell.js";
-/**
- * Future Goals
- * catalan()
- * bell()
- * bernoulli()
- * stirlingFirstKind()
- * stirlingSecondKind()
- * pascalRow()
- * lookAndSay()
- * collatz()
- * hailstone()
- * fareySequence()
- * continuedFraction()
- */
+export { default as catalan } from "./sequences/catalan.js";
+export { default as bell } from "./sequences/bell.js";
+export { default as bernoulli } from "./sequences/bernoulli.js";
+export { default as stirlingFirstKind } from "./sequences/stirlingFirstKind.js";
+export { default as stirlingSecondKind } from "./sequences/stirlingSecondKind.js";
+export { default as pascalRow } from "./sequences/pascalRow.js";
+export { default as lookAndSay } from "./sequences/lookAndSay.js";
+export { default as collatz } from "./sequences/collatz.js";
+export { default as hailstone } from "./sequences/hailstone.js";
+export { default as fareySequence } from "./sequences/fareySequence.js";
+export { default as continuedFraction } from "./sequences/continuedFraction.js";
 
 // MATRICES
 export { default as matrixAdd } from "./matrices/matrixAdd.js";
@@ -455,18 +438,15 @@ export { APERY } from "./constants/constants.js";
  */
 
 // COORDINATE GEOMETRY
-/**
- * Future Goals
- * slope()
- * distance()
- * midpoint()
- * lineEquation()
- * circleEquation()
- * reflectPoint()
- * rotatePoint()
- * translatePoint()
- * scalePoint()
- */
+export { default as slope } from "./coordinateGeometry/slope.js";
+export { default as distance } from "./coordinateGeometry/distance.js";
+export { default as midpoint } from "./coordinateGeometry/midpoint.js";
+export { default as lineEquation } from "./coordinateGeometry/lineEquation.js";
+export { default as circleEquation } from "./coordinateGeometry/circleEquation.js";
+export { default as reflectPoint } from "./coordinateGeometry/reflectPoint.js";
+export { default as rotatePoint } from "./coordinateGeometry/rotatePoint.js";
+export { default as translatePoint } from "./coordinateGeometry/translatePoint.js";
+export { default as scalePoint } from "./coordinateGeometry/scalePoint.js";
 
 // PROBABILITY
 /**
@@ -499,16 +479,13 @@ export { APERY } from "./constants/constants.js";
  */
 
 // CRYPTOGRAPHY HELPERS
-/**
- * Future Goals
- * modInverse()
- * extendedGCD()
- * modPow()
- * rsaToy()
- * caesarCipher()
- * vigenereCipher()
- * xorCipher()
- */
+export { default as extendedGCD } from "./cryptography/extendedGCD.js";
+export { default as modInverse } from "./cryptography/modInverse.js";
+export { default as modPow } from "./cryptography/modPow.js";
+export { default as rsaToy } from "./cryptography/rsaToy.js";
+export { default as caesarCipher } from "./cryptography/caesarCipher.js";
+export { default as vigenereCipher } from "./cryptography/vigenereCipher.js";
+export { default as xorCipher } from "./cryptography/xorCipher.js";
 
 // BINARY
 /**
@@ -537,31 +514,23 @@ export { APERY } from "./constants/constants.js";
  */
 
 // UNIT CONVERSION
-/**
- * Future Goals
- * metersToFeet()
- * feetToMeters()
- * celsiusToKelvin()
- * fahrenheitToCelsius()
- * kmhToMph()
- * mphToKmh()
- * bytesToKB()
- * kbToMB()
- * litersToGallons()
- * gramsToOunces()
- * degreesToRadians()
- * radiansToDegrees()
- */
+export { default as metersToFeet } from "./unitConversion/metersToFeet.js";
+export { default as feetToMeters } from "./unitConversion/feetToMeters.js";
+export { default as celsiusToKelvin } from "./unitConversion/celsiusToKelvin.js";
+export { default as fahrenheitToCelsius } from "./unitConversion/fahrenheitToCelsius.js";
+export { default as kmhToMph } from "./unitConversion/kmhToMph.js";
+export { default as mphToKmh } from "./unitConversion/mphToKmh.js";
+export { default as bytesToKB } from "./unitConversion/bytesToKB.js";
+export { default as kbToMB } from "./unitConversion/kbToMB.js";
+export { default as litersToGallons } from "./unitConversion/litersToGallons.js";
+export { default as gramsToOunces } from "./unitConversion/gramsToOunces.js";
 
 // DATE MATH
-/**
- * Future Goals
- * daysBetween()
- * weeksBetween()
- * monthsBetween()
- * isWeekend()
- * isBusinessDay()
- * addBusinessDays()
- * age()
- * dayOfYear()
- */
+export { default as daysBetween } from "./dateMath/daysBetween.js";
+export { default as weeksBetween } from "./dateMath/weeksBetween.js";
+export { default as monthsBetween } from "./dateMath/monthsBetween.js";
+export { default as isWeekend } from "./dateMath/isWeekend.js";
+export { default as isBusinessDay } from "./dateMath/isBusinessDay.js";
+export { default as addBusinessDays } from "./dateMath/addBusinessDays.js";
+export { default as age } from "./dateMath/age.js";
+export { default as dayOfYear } from "./dateMath/dayOfYear.js";

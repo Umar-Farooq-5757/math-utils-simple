@@ -18,6 +18,16 @@ import {
   weightedChoice,
   randomGaussian,
   randomSeed,
+  randomNormal,
+  randomExponential,
+  randomPoisson,
+  randomBinomial,
+  randomTriangular,
+  randomWeightedShuffle,
+  uuidV4,
+  randomPassword,
+  randomPrime,
+  randomPermutation,
 } from "../src/index.js";
 
 test("random", () => {
@@ -38,10 +48,7 @@ test("randomInt", () => {
 });
 
 test("randomInt throws", () => {
-  assert.throws(
-    () => randomInt(10, 5),
-    /Minimum cannot be greater/
-  );
+  assert.throws(() => randomInt(10, 5), /Minimum cannot be greater/);
 });
 
 test("randomFloat", () => {
@@ -68,10 +75,7 @@ test("randomChoice", () => {
 });
 
 test("randomChoice throws", () => {
-  assert.throws(
-    () => randomChoice([]),
-    /empty array/
-  );
+  assert.throws(() => randomChoice([]), /empty array/);
 });
 
 test("shuffle", () => {
@@ -103,24 +107,15 @@ test("sample", () => {
     assert.ok([1, 2, 3, 4, 5].includes(value));
   }
 
-  assert.equal(
-    new Set(values).size,
-    values.length
-  );
+  assert.equal(new Set(values).size, values.length);
 });
 
 test("sample count zero", () => {
-  assert.deepEqual(
-    sample([1, 2, 3], 0),
-    []
-  );
+  assert.deepEqual(sample([1, 2, 3], 0), []);
 });
 
 test("sample throws when count exceeds length", () => {
-  assert.throws(
-    () => sample([1, 2], 3),
-    /Count cannot exceed/
-  );
+  assert.throws(() => sample([1, 2], 3), /Count cannot exceed/);
 });
 
 test("randomSign", () => {
@@ -143,7 +138,7 @@ test("randomUUID", () => {
 
   assert.match(
     id,
-    /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i,
   );
 });
 
@@ -179,41 +174,30 @@ test("randomDate", () => {
 
 test("randomDate invalid range", () => {
   assert.throws(() =>
-    randomDate(new Date("2021-01-01"), new Date("2020-01-01"))
+    randomDate(new Date("2021-01-01"), new Date("2020-01-01")),
   );
 });
 
 test("weightedChoice", () => {
-  const value = weightedChoice(
-    ["A", "B", "C"],
-    [1, 2, 3]
-  );
+  const value = weightedChoice(["A", "B", "C"], [1, 2, 3]);
 
   assert.ok(["A", "B", "C"].includes(value));
 });
 
 test("weightedChoice empty array", () => {
-  assert.throws(() =>
-    weightedChoice([], [])
-  );
+  assert.throws(() => weightedChoice([], []));
 });
 
 test("weightedChoice mismatched lengths", () => {
-  assert.throws(() =>
-    weightedChoice(["A"], [1, 2])
-  );
+  assert.throws(() => weightedChoice(["A"], [1, 2]));
 });
 
 test("weightedChoice negative weight", () => {
-  assert.throws(() =>
-    weightedChoice(["A", "B"], [1, -2])
-  );
+  assert.throws(() => weightedChoice(["A", "B"], [1, -2]));
 });
 
 test("weightedChoice zero total weight", () => {
-  assert.throws(() =>
-    weightedChoice(["A", "B"], [0, 0])
-  );
+  assert.throws(() => weightedChoice(["A", "B"], [0, 0]));
 });
 
 test("randomGaussian", () => {
@@ -258,4 +242,148 @@ test("randomSeed output range", () => {
     assert.ok(value >= 0);
     assert.ok(value < 1);
   }
+});
+
+test("randomNormal default", () => {
+  const value = randomNormal();
+
+  assert.equal(typeof value, "number");
+  assert.ok(Number.isFinite(value));
+});
+
+test("randomNormal custom", () => {
+  const value = randomNormal(100, 15);
+
+  assert.equal(typeof value, "number");
+});
+
+test("randomNormal invalid deviation", () => {
+  assert.throws(() => randomNormal(0, 0));
+});
+
+test("randomExponential", () => {
+  const value = randomExponential();
+
+  assert.ok(value >= 0);
+});
+
+test("randomExponential custom", () => {
+  const value = randomExponential(2);
+
+  assert.ok(value >= 0);
+});
+
+test("randomExponential invalid", () => {
+  assert.throws(() => randomExponential(0));
+});
+
+test("randomPoisson", () => {
+  const value = randomPoisson(4);
+
+  assert.ok(Number.isInteger(value));
+  assert.ok(value >= 0);
+});
+
+test("randomPoisson invalid", () => {
+  assert.throws(() => randomPoisson(0));
+});
+
+test("randomBinomial", () => {
+  const value = randomBinomial(20, 0.5);
+
+  assert.ok(Number.isInteger(value));
+  assert.ok(value >= 0);
+  assert.ok(value <= 20);
+});
+
+test("randomBinomial invalid trials", () => {
+  assert.throws(() => randomBinomial(-1, 0.5));
+});
+
+test("randomBinomial invalid probability", () => {
+  assert.throws(() => randomBinomial(10, 2));
+});
+
+test("randomTriangular", () => {
+  const value = randomTriangular(10, 20, 30);
+
+  assert.ok(value >= 10);
+  assert.ok(value <= 30);
+});
+
+test("randomTriangular invalid", () => {
+  assert.throws(() => randomTriangular(10, 40, 30));
+});
+
+test("randomWeightedShuffle", () => {
+  const result = randomWeightedShuffle(["a", "b", "c"], [5, 2, 1]);
+
+  assert.equal(result.length, 3);
+
+  assert.deepEqual([...result].sort(), ["a", "b", "c"]);
+});
+
+test("randomWeightedShuffle invalid", () => {
+  assert.throws(() => randomWeightedShuffle(["a"], [1, 2]));
+});
+
+test("uuidV4", () => {
+  const id = uuidV4();
+
+  assert.match(
+    id,
+    /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i,
+  );
+});
+
+test("randomPassword default", () => {
+  const password = randomPassword();
+
+  assert.equal(password.length, 12);
+});
+
+test("randomPassword custom length", () => {
+  const password = randomPassword({
+    length: 20,
+  });
+
+  assert.equal(password.length, 20);
+});
+
+test("randomPassword invalid length", () => {
+  assert.throws(() => randomPassword({ length: 0 }));
+});
+
+test("randomPassword no charset", () => {
+  assert.throws(() =>
+    randomPassword({
+      uppercase: false,
+      lowercase: false,
+      numbers: false,
+      symbols: false,
+    }),
+  );
+});
+
+test("randomPrime", () => {
+  const value = randomPrime(10, 30);
+
+  assert.ok([11, 13, 17, 19, 23, 29].includes(value));
+});
+
+test("randomPrime no primes", () => {
+  assert.throws(() => randomPrime(14, 16));
+});
+
+test("randomPermutation", () => {
+  const original = [1, 2, 3, 4, 5];
+
+  const shuffled = randomPermutation(original);
+
+  assert.equal(shuffled.length, original.length);
+
+  assert.deepEqual(
+    [...shuffled].sort((a, b) => a - b),
+    [...original],
+  );
 });
